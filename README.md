@@ -10,7 +10,7 @@ This framework is Open Source According to [MIT license](LICENSE.md)
 ## Table Of Contents
 
 * [Installation](#installation)
-* [Setup]
+* [Setup](#setup)
 * [Using](#using)
 	* [Route](#route)
 	* [Model](#model)
