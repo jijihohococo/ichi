@@ -23,7 +23,7 @@ This framework is Open Source According to [MIT license](LICENSE.md)
 
 ```php
 
-composer require jijihohococo/ichi
+composer create-project jijihohococo/ichi:dev-master your_project
 
 ```
 
