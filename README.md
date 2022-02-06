@@ -186,4 +186,14 @@ class TestController{
 }
 
 ```
+You can call your validation error messages in your view php file
+
+```
+
+<?php if(isset($errors['name'])); ?>
+<?php echo $errors['name']; ?>
+<?php endif; ?>
+
+```
+
 For more detail, use <a href="https://github.com/jijihohococo/ichi-validation/blob/master/README.md"> this documentation</a>.
