@@ -1,0 +1,189 @@
+# ICHI PHP FRAMEWORK
+
+ICHI PHP FRAMEWORK is the fast and secure MVC PHP framework.
+
+## License
+
+This framework is Open Source According to [MIT license](LICENSE.md)
+
+
+## Table Of Contents
+
+* [Installation](#installation)
+* [Setup]
+* [Using](#using)
+	* [Route](#route)
+	* [Model](#model)
+	* [Controller](#controller)
+	* [View](#view)
+	* [Validation](#validation)
+
+
+## Installation
+
+```php
+
+composer require jijihohococo/ichi
+
+```
+
+## Setup
+
+Before running the app, you must declare your real database name, database username and password in .env file.
+
+You can run the app from public path
+
+```txt
+
+your_project/public > php -S localhost:8000
+
+```
+
+## Using
+
+### Route
+
+You can add your route in 'web' function of "routes/web.php".
+
+If you want to add another route file, create new route file under "routes" folder.
+And then you must add new function like 'web.php'.
+
+```php
+
+function new_routes($route){
+
+}
+
+```
+
+Then you must use your new route file in 'app/Kernel.php';
+
+```php
+
+namespace App;
+
+use JiJiHoHoCoCo\IchiRoute\Router\Route;
+
+require_once __DIR__ . '/../routes/new_routes.php';
+
+class Kernel{
+
+
+	public function run(){
+		$route=new Route;
+		new_routes($route);
+		$route->run();
+	}
+
+
+
+}
+
+```
+<b>Above code is highlighting the things in adding new route file.</b>
+
+You can use <a href="https://github.com/jijihohococo/ichi-route/blob/master/README.md">this docuementation</a> for the route function in detail.
+
+### Model
+
+You can add another database connection in "app/Kernel.php" as shown as <a href="https://github.com/jijihohococo/ichi-model/blob/master/README.md"> this documention </a>.
+
+You can create model
+
+```php
+
+php ichi make:model NewModel
+
+```
+
+### Controller
+
+You can create Controller
+
+```php
+
+php ichi make:controller NewController
+
+```
+For more detail, use <a href="https://github.com/jijihohococo/ichi-route/blob/master/README.md#creating-controller"> this documentation </a>.
+
+### View
+
+You can create View Component
+
+```php
+
+php ichi make:component 
+
+```
+
+You can return view in the route or controller's function
+
+<i>Without Controller</i>
+```php
+
+$route->get('/welcome',function(){
+	return view('welcome.php');
+});
+
+```
+
+<i>With Controller</i>
+```php
+
+$route->get('/welcome','HomeController@welcome');
+
+```
+
+```php
+
+namespace App\Controllers;
+
+
+class HomeController{
+
+
+	public function welcome(){
+		return view('welcome.php');
+	}
+
+
+}
+```
+
+For more detail, use <a href="https://github.com/jijihohococo/ichi-template/blob/master/README.md"> this documentation</a>.
+
+
+### Validation
+
+You can validate the input data in your controller class
+
+
+```php
+
+namespace App\Controllers;
+
+
+use JiJiHoHoCoCo\IchiValidation\Validator;
+class TestController{
+
+
+	public function test(){
+
+		$validator=new Validator();
+		if(!$validator->validate($_REQUEST,[
+			'name' => 'required' ,
+			'age' => 'required|integer' ,
+			'email' => ['required','email']
+		])){
+			setErrors($validator->getErrors());
+			return view('test.php');
+		}
+
+	}
+
+
+}
+
+```
+For more detail, use <a href="https://github.com/jijihohococo/ichi-validation/blob/master/README.md"> this documentation</a>.
