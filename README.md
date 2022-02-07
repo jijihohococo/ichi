@@ -13,6 +13,7 @@ This framework is Open Source According to [MIT license](LICENSE.md)
 * [Setup](#setup)
 * [Using](#using)
 	* [Route](#route)
+	* [Middleware](#middleware)
 	* [Model](#model)
 	* [Controller](#controller)
 	* [View](#view)
@@ -82,7 +83,20 @@ class Kernel{
 ```
 <b>Above code is highlighting the things in adding new route file.</b>
 
-You can use <a href="https://github.com/jijihohococo/ichi-route/blob/master/README.md">this docuementation</a> for the route function in detail.
+You can use <a href="https://github.com/jijihohococo/ichi-route/blob/master/README.md">this docuementation</a> for the route functions in detail.
+
+### Middleware
+
+You can create middleware for routes in command line.
+
+```php
+
+php ichi make:middleware NewMiddleware
+
+```
+
+You can use <a href="https://github.com/jijihohococo/ichi-route#middleware">this documentation</a> for the middleware functions in detail.
+
 
 ### Model
 
