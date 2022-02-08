@@ -30,7 +30,20 @@ composer create-project jijihohococo/ichi:dev-master your_project
 
 ## Setup
 
-Before running the app, you must declare your real database name, database username and password in .env file.
+First, You must create .env file under your project folder. And then you must declare your real database name, database username and password in this .env file.
+
+<b>You can see how to set the data in .env.example under your project folder.</b>
+
+<i>In your .env file</i>
+
+```txt
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user_name
+DB_PASSWORD=your_database_password
+```
 
 You can run the app from public path
 
