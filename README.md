@@ -102,7 +102,7 @@ You can use <a href="https://github.com/jijihohococo/ichi-route#middleware">this
 
 ### Model
 
-You can add another database connection in "app/Kernel.php" as shown as <a href="https://github.com/jijihohococo/ichi-model/blob/master/README.md"> this documention </a>.
+You can add another database connection in "app/Kernel.php" as shown as <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md"> this documention </a>.
 
 You can create model
 
@@ -113,6 +113,7 @@ php ichi make:model NewModel
 ```
 
 The Model Class will be created under 'app/Models' folder.
+
 
 ### Controller
 
