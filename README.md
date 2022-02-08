@@ -102,9 +102,9 @@ You can use <a href="https://github.com/jijihohococo/ichi-route#middleware">this
 
 ### Model
 
-You can add another database connection in "app/Kernel.php" as shown as <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md"> this documention </a>.
+You can add another database connection in "app/Kernel.php" as shown as <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md#set-up-database-connection"> this documention </a>.
 
-You can create model
+You can create model in command line.
 
 ```php
 
@@ -114,10 +114,11 @@ php ichi make:model NewModel
 
 The Model Class will be created under 'app/Models' folder.
 
+You can use <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md"></a> to use Model in detail
 
 ### Controller
 
-You can create Controller
+You can create Controller in command line.
 
 ```php
 
@@ -131,7 +132,7 @@ For more detail, use <a href="https://github.com/jijihohococo/ichi-route/blob/ma
 
 ### View
 
-You can create View Component
+You can create View Component Class in command line.
 
 ```php
 
