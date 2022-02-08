@@ -3,7 +3,7 @@
 function web($route){
 
 	$route->get('/',function(){
-		echo 'Welcome';
+		return view('index.php');
 	});
 
 
