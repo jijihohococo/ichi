@@ -95,6 +95,8 @@ php ichi make:middleware NewMiddleware
 
 ```
 
+The Middleware Class will be created under 'app/Middleware' folder.
+
 You can use <a href="https://github.com/jijihohococo/ichi-route#middleware">this documentation</a> for the middleware functions in detail.
 
 
@@ -110,6 +112,8 @@ php ichi make:model NewModel
 
 ```
 
+The Model Class will be created under 'app/Models' folder.
+
 ### Controller
 
 You can create Controller
@@ -119,6 +123,9 @@ You can create Controller
 php ichi make:controller NewController
 
 ```
+
+The Controller Class will be created under 'app/Controllers' folder.
+
 For more detail, use <a href="https://github.com/jijihohococo/ichi-route/blob/master/README.md#creating-controller"> this documentation </a>.
 
 ### View
@@ -130,6 +137,8 @@ You can create View Component
 php ichi make:component 
 
 ```
+The View Component Class will be created under 'app/Components' folder
+
 
 You can return view in the route or controller's function
 
