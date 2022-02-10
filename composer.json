@@ -23,10 +23,10 @@
         ]
     },
 	"require": {
-		"jijihohococo/ichi-route": "^1.2",
-		"jijihohococo/ichi-template": "^1.0",
-		"jijihohococo/ichi-orm": "^1.8.2",
+		"jijihohococo/ichi-route": "^1.6",
+		"jijihohococo/ichi-template": "^1.8",
+		"jijihohococo/ichi-orm": "^2.0",
 		"jijihohococo/php-env": "^1.3",
-		"jijihohococo/ichi-validation": "^1.2"
+		"jijihohococo/ichi-validation": "^1.3"
 	}
 }
