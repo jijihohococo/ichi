@@ -149,7 +149,7 @@ You can create View Component Class in command line.
 
 ```php
 
-php ichi make:component 
+php ichi make:component ViewComponent
 
 ```
 The View Component Class will be created under 'app/Components' folder
