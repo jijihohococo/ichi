@@ -127,6 +127,21 @@ php ichi make:model NewModel
 
 The Model Class will be created under 'app/Models' folder.
 
+<i>Example Model</i>
+
+```php
+
+namespace App\Models;
+
+use JiJiHoHoCoCo\IchiORM\Database\Model;
+
+class NewModel extends Model{
+
+	public $id , $name , $created_at , $updated_at , $deleted_at ;
+
+}
+```
+
 You can use <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md"> this model </a> to use Model in detail
 
 ### Controller
