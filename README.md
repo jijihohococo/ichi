@@ -142,7 +142,7 @@ class NewModel extends Model{
 }
 ```
 
-You can use <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md"> this model </a> to use Model in detail
+You can use <a href="https://github.com/jijihohococo/ichi-orm/blob/master/README.md"> this documentation </a> to use Model in detail
 
 ### Controller
 
@@ -203,6 +203,8 @@ class HomeController{
 
 }
 ```
+
+You must create view PHP file under 'resources/views' folder.
 
 For more detail, use <a href="https://github.com/jijihohococo/ichi-template/blob/master/README.md"> this documentation</a>.
 
