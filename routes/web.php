@@ -1,8 +1,9 @@
 <?php
 
-function web($route){
+use JiJiHoHoCoCo\IchiRoute\Router\Route;
+function web(Route $route){
 
-	$route->get('/',function(){
+	$route->get('/', function(){
 		return view('index.php');
 	});
 
