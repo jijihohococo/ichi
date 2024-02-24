@@ -31,6 +31,7 @@ class Kernel{
 		View::setPath(__DIR__.'/../resources/views/');
 
 		$route = new Route;
+		$route->setKeyValue("mysql", $connector->getConnection());
 		$route->setBaseControllerPath('App\Controllers');
 		$route->setBaseMiddlewarePath('App\Middlewares');
 		$route->setDefaultMiddlewares($this->autoloadMiddlewares);
