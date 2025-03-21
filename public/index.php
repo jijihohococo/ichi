@@ -17,5 +17,5 @@ ENV::set(__DIR__.'/../.env');
 
 session_start();
 generateCSRFToken();
-$kernel=new Kernel;
+$kernel = new Kernel;
 $kernel->run();
