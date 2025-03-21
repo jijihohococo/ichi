@@ -9,15 +9,15 @@ use JiJiHoHoCoCo\IchiRoute\Command\RouteCommand;
 use JiJiHoHoCoCo\IchiTemplate\Command\TemplateCommand;
 use JiJiHoHoCoCo\IchiValidation\Command\ValidationCommand;
 
-$modelCommand=new ModelCommand;
+$modelCommand = new ModelCommand;
 $modelCommand->run(__DIR__,$argv);
 
-$routeCommand=new RouteCommand;
+$routeCommand = new RouteCommand;
 $routeCommand->run(__DIR__,$argv);
 
-$templateCommand=new TemplateCommand;
+$templateCommand = new TemplateCommand;
 $templateCommand->run(__DIR__,$argv);
 
-$validationCommand=new ValidationCommand;
+$validationCommand = new ValidationCommand;
 $validationCommand->run(__DIR__,$argv);
 
