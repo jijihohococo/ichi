@@ -9,15 +9,18 @@ This framework is Open Source According to [MIT license](LICENSE.md)
 
 ## Table Of Contents
 
-* [Installation](#installation)
-* [Setup](#setup)
-* [Using](#using)
-	* [Route](#route)
-	* [Middleware](#middleware)
-	* [Model](#model)
-	* [Controller](#controller)
-	* [View](#view)
-	* [Validation](#validation)
+- [ICHI PHP FRAMEWORK](#ichi-php-framework)
+	- [License](#license)
+	- [Table Of Contents](#table-of-contents)
+	- [Installation](#installation)
+	- [Setup](#setup)
+	- [Using](#using)
+		- [Route](#route)
+		- [Middleware](#middleware)
+		- [Model](#model)
+		- [Controller](#controller)
+		- [View](#view)
+		- [Validation](#validation)
 
 
 ## Installation
@@ -84,7 +87,7 @@ class Kernel{
 
 
 	public function run(){
-		$route=new Route;
+		$route = new Route;
 		new_routes($route);
 		$route->run();
 	}
@@ -225,7 +228,7 @@ class TestController{
 
 	public function test(){
 
-		$validator=new Validator();
+		$validator = new Validator();
 		if(!$validator->validate($_REQUEST,[
 			'name' => 'required' ,
 			'age' => 'required|integer' ,
