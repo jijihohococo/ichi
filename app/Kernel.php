@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App;
 
 use JiJiHoHoCoCo\IchiRoute\Router\Route;
@@ -10,33 +9,36 @@ use JiJiHoHoCoCo\IchiTemplate\Template\View;
 require_once __DIR__ . '/../routes/web.php';
 require_once __DIR__ . '/../routes/api.php';
 
+class Kernel
+{
+    public array $autoloadMiddlewares = [
+        'JiJiHoHoCoCo\IchiRoute\Middleware\CSRFMiddleware',
+    ];
 
-class Kernel{
+    public function run(): void
+    {
+        $connector = new Connector();
 
-	public $autoloadMiddlewares = [
-		'JiJiHoHoCoCo\IchiRoute\Middleware\CSRFMiddleware'
-	];
+        $connector->createConnection('mysql', [
+            'host'          => gete('DB_HOST'),
+            'dbname'        => gete('DB_DATABASE'),
+            'user_name'     => gete('DB_USERNAME'),
+            'user_password' => gete('DB_PASSWORD'),
+        ]);
 
-	public function run(){
+        $connector->selectConnection(gete('DB_CONNECTION'));
 
-		$connector = new Connector;
-		$connector->createConnection('mysql', [
-			'host'				=> gete('DB_HOST'),
-			'dbname'			=> gete('DB_DATABASE'),
-			'user_name' 		=> gete('DB_USERNAME'),
-			'user_password'		=> gete('DB_PASSWORD') ]);
+        View::setPath(__DIR__ . '/../resources/views/');
 
-		$connector->selectConnection(gete('DB_CONNECTION'));
+        $route = new Route();
+        $route->setKeyValue('mysql', $connector->getConnection());
+        $route->setBaseControllerPath('App\Controllers');
+        $route->setBaseMiddlewarePath('App\Middlewares');
+        $route->setDefaultMiddlewares($this->autoloadMiddlewares);
 
-		View::setPath(__DIR__.'/../resources/views/');
+        web($route);
+        api($route);
 
-		$route = new Route;
-		$route->setKeyValue("mysql", $connector->getConnection());
-		$route->setBaseControllerPath('App\Controllers');
-		$route->setBaseMiddlewarePath('App\Middlewares');
-		$route->setDefaultMiddlewares($this->autoloadMiddlewares);
-		web($route);
-		api($route);
-		$route->run();
-	}
+        $route->run();
+    }
 }
