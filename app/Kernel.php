@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App;
 
 use JiJiHoHoCoCo\IchiRoute\Router\Route;
@@ -13,18 +12,20 @@ require_once __DIR__ . '/../routes/api.php';
 class Kernel
 {
 
-	public function run(){
+    public function run(): void
+    {
+        $connector = new Connector();
 
-		$connector = new Connector;
-		$connector->createConnection('mysql', [
-			'host'				=> gete('DB_HOST'),
-			'dbname'			=> gete('DB_DATABASE'),
-			'user_name' 		=> gete('DB_USERNAME'),
-			'user_password'		=> gete('DB_PASSWORD') ]);
+        $connector->createConnection('mysql', [
+            'host'          => gete('DB_HOST'),
+            'dbname'        => gete('DB_DATABASE'),
+            'user_name'     => gete('DB_USERNAME'),
+            'user_password' => gete('DB_PASSWORD'),
+        ]);
 
-		$connector->selectConnection(gete('DB_CONNECTION'));
+        $connector->selectConnection(gete('DB_CONNECTION'));
 
-		View::setPath(__DIR__.'/../resources/views/');
+        View::setPath(__DIR__ . '/../resources/views/');
 
         $route = new Route();
         $route->setKeyValue('mysql', $connector->getConnection());

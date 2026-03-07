@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ichi PHP MVC Framework</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
@@ -36,25 +37,29 @@
       width: 100%;
     }
 
-    /* Media queries for responsive design */
-
     @media only screen and (max-width: 600px) {
       section {
         margin: 1rem;
       }
     }
   </style>
-  <title>Ichi PHP MVC Framework</title>
 </head>
 <body>
   <header>
     <h1>Ichi PHP MVC Framework</h1>
   </header>
 
-  <section>
-    <p>Thanks for using Ichi MVC Framework. It is free to use and open source.</p>
-    <p>Here is <a href="https://github.com/jijihohococo/ichi" target="_blank"> the document </a> </p>
-  </section>
+  <main>
+    <section>
+      <p>Thanks for using the Ichi MVC Framework. It is free to use and open source.</p>
+      <p>
+        Here is
+        <a href="https://github.com/jijihohococo/ichi" target="_blank" rel="noopener noreferrer">
+          the documentation
+        </a>.
+      </p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2024 Ichi PHP MVC Framework. All rights reserved.</p>
