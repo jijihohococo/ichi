@@ -24,7 +24,7 @@ This framework is open source under the [MIT license](LICENSE.md).
 ## Installation
 
 ```php
-composer create-project jijihohococo/ichi:dev-master your_project
+composer create-project jijihohococo/ichi your_project
 ```
 
 ## Setup
