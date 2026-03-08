@@ -62,7 +62,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2024 Ichi PHP MVC Framework. All rights reserved.</p>
+    <p>&copy; <?php echo date('Y'); ?> Ichi PHP MVC Framework. All rights reserved.</p>
   </footer>
 </body>
 </html>
