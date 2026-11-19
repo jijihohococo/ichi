@@ -11,7 +11,6 @@ require_once __DIR__ . '/../routes/api.php';
 
 class Kernel
 {
-
     public function run(): void
     {
         $connector = new Connector();
